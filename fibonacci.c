@@ -16,9 +16,22 @@ int fibIter(int n)
 
     return n3;
 }
+
+int fibRecur(int n)
+{
+    if (n <= 1)
+    {
+        return n;
+    }
+
+    return fibRecur(n - 1) + fibRecur(n - 2);
+}
 int main()
 {
     int ans = fibIter(5);
-    printf("%d ", ans);
+    int ans2 = fibRecur(5);
+    printf("By Iterative approach: %d \n", ans);
+    printf("By Recursive approach: %d ", ans2);
+
     return 0;
 }
